@@ -6,12 +6,13 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:26:18 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/03 20:34:20 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/06 22:41:12 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+
 /*int ft_isalpha(char c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);
@@ -21,3 +22,5 @@ size_t ft_strlen(const char *str);
 size_t ft_strlcpy(char *dest, char *src, size_t n );
 char *ft_strchr(const char *str, int c);
 char *ft_strrchr(const char *str, int c);
+char * ft_strdup(const char *s1);
+

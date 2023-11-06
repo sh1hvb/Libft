@@ -6,11 +6,12 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:42:32 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/04 12:42:46 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/06 22:50:46 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 char * ft_strdup(const char *s1)
 {
     char *p;
@@ -26,6 +27,5 @@ char * ft_strdup(const char *s1)
        i++;
     }
     p[i]='\0';
-    return p;
-        free(p);                                
+    return p;                              
 }
