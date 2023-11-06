@@ -6,14 +6,21 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:42:03 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/04 12:42:04 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/06 17:09:47 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "libft.h"
 int ft_isascii(int c)
 {
-    if(c >= 0 && c <= 0177)
+    printf("%d",c);
+    if(c >= 0 && c <= 127)
         return 1;
     return 0;
+}
+int main()
+{
+    int a =ft_isascii(300);
+    printf("%d",a);
+
 }

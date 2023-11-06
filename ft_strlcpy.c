@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:42:59 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/04 12:43:00 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/06 14:24:16 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ size_t ft_strlcpy(char *dest, char *src, size_t n )
         i++;
     }
     dest[i]='\0';
-    return ft_strlen(src);
+    return ft_strlen(src) + 1;
 }
