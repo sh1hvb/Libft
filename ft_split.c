@@ -6,14 +6,14 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:32:04 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/10 14:31:20 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/10 21:19:41 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	clear(char **arr)
+static void	clear(char **arr)
 {
 	size_t	i;
 
@@ -23,7 +23,7 @@ void	clear(char **arr)
 	free(arr);
 }
 
-int	count_word(const char *str, char c)
+static int	count_word(const char *str, char c)
 {
 	int	i;
 	int	count;
@@ -46,7 +46,7 @@ int	count_word(const char *str, char c)
 	return (count);
 }
 
-void	fill_arr(char **arr, const char *str, char c)
+static void	fill_arr(char **arr, const char *str, char c)
 {
 	size_t	i;
 	int		index;
@@ -86,9 +86,10 @@ char	**ft_split(char const *s, char c)
 	fill_arr(arr, s, c);
 	arr[wrdcnt] = 0;
 	return (arr);
+	clear(arr);
 }
 // int main() {
-//     char *a="chihab , habibi , come , to , dubai";
+//     char *a="chihab , habibi , come , to , 1337";
 //     char c =',';
 //     char **arr= ft_split(a,c);
 //     size_t i = 0;
