@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mchihab <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 09:57:52 by mchihab           #+#    #+#             */
-/*   Updated: 2023/10/31 10:10:06 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/07 18:20:35 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int a)
+int	ft_isprint(int a)
 {
-	if(a >= 33 && a < 127)
-		return 1;
-	return 0;
+	return (a >= 32 && a < 127);
 }

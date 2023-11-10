@@ -6,14 +6,13 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:44:32 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/04 12:44:34 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/07 17:43:30 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_toupper(int ch)
+int	ft_toupper(int ch)
 {
-    if(ch >= 'a' && ch <= 'z')
-        ch =- 32;
-    return ch;
+	if (ch >= 'a' && ch <= 'z')
+		ch -= 32;
+	return (ch);
 }
