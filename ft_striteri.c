@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memove.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 12:42:18 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/04 16:55:44 by mchihab          ###   ########.fr       */
+/*   Created: 2023/11/11 11:28:57 by mchihab           #+#    #+#             */
+/*   Updated: 2023/11/12 19:01:20 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-void *ft_memove(void *dst, const void *src, size_t len)
-{
-char *s;
-char *d;
-size_t i;
+#include "libft.h"
 
-s =(char*)src;
-d = (char *)dst;
-i = 0;
-if(d > s)
-    while (len-- > 0)
-        d[len] = s[len];
-else
-    while (i < len)
-    {
-        d[i] = s[i];
-        i++;
-    }
-    return (dst);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
+	i = -1;
+	while (s[++i])
+		f(i, &s[i]);
 }

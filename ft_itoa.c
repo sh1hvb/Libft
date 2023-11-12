@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:45:19 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/10 14:48:27 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/12 18:35:46 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static int	cnt(int n)
 	}
 	return (count);
 }
+
 static void	insert(char *p, int n, int len)
 {
 	int	a;
@@ -49,6 +50,7 @@ static void	insert(char *p, int n, int len)
 	}
 	p[a] = '\0';
 }
+
 char	*ft_itoa(int n)
 {
 	char	*p;

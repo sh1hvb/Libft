@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mchihab <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 08:19:54 by mchihab           #+#    #+#             */
-/*   Updated: 2023/10/31 08:59:26 by mchihab          ###   ########.fr       */
+/*   Created: 2023/11/11 12:09:15 by mchihab           #+#    #+#             */
+/*   Updated: 2023/11/12 12:25:25 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-int ft_isalpha(char c){
-	if ((c >='a' && c <= 'z') ||( c >= 'A' && c <= 'Z'))
-		return 1;
-	return 0;
+#include <unistd.h>
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
 }
+// int main()
+// {
+//     size_t c =fopen(".","rw",0120) ;
+// }

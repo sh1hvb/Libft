@@ -1,44 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 14:46:23 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/12 19:11:59 by mchihab          ###   ########.fr       */
+/*   Created: 2023/11/11 13:13:26 by mchihab           #+#    #+#             */
+/*   Updated: 2023/11/12 18:59:23 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	len;
-	size_t	i;
-	char	*p;
+	int		result;
+	char	c;
 
-	if (!s && !f)
-		return (0);
-	len = ft_strlen(s);
-	p = (char *)malloc(len + 1);
-	if (!p)
-		return (0);
-	i = 0;
-	while (i < len)
+	result = 1;
+	if (fd < 0)
+		return ;
+	if (n == -2147483648)
 	{
-		p[i] = f(i, s[i]);
-		i++;
+		ft_putnbr_fd(n / 10, fd);
+		write(fd, "8", 1);
 	}
-	p[i] = '\0';
-	return ((char *)(p));
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		c = n % 10 + 48;
+	}
+	else
+		c = n + '0';
+	write(fd, &c, 1);
 }
-
-// char hamid(unsigned int n, char s )
-// {
-//     return (n + s);
-// }
 // int main()
 // {
-//     printf("%s",ft_strmapi("habibi come to 1337", hamid));
+
+//     int fd = open("foo.txt", O_CREAT| O_RDWR);
+//     ft_putnbr_fd(-2147483648,fd);
+//     return (0);
 // }
