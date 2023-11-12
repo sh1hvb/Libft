@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:42:23 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/06 17:23:30 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/12 18:55:56 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	*ft_memset(void *str, int c, size_t n)
 {
-	int i = 0;
-	char *dest = (char *)str;
+	int		i;
+	char	*dest;
+
+	i = 0;
+	dest = (char *)str;
 	while (n != 0)
 	{
 		dest[i++] = c;

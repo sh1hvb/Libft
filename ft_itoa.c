@@ -6,14 +6,14 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:45:19 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/09 14:45:44 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/12 18:35:46 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	cnt(int n)
+static int	cnt(int n)
 {
 	int	count;
 
@@ -30,7 +30,8 @@ int	cnt(int n)
 	}
 	return (count);
 }
-void	insert(char *p, int n, int len)
+
+static void	insert(char *p, int n, int len)
 {
 	int	a;
 
@@ -49,6 +50,7 @@ void	insert(char *p, int n, int len)
 	}
 	p[a] = '\0';
 }
+
 char	*ft_itoa(int n)
 {
 	char	*p;

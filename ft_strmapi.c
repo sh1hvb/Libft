@@ -1,34 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 12:42:59 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/12 19:10:55 by mchihab          ###   ########.fr       */
+/*   Created: 2023/11/10 14:46:23 by mchihab           #+#    #+#             */
+/*   Updated: 2023/11/12 19:11:59 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
 	size_t	len;
+	size_t	i;
+	char	*p;
 
-	len = ft_strlen(src);
+	if (!s && !f)
+		return (0);
+	len = ft_strlen(s);
+	p = (char *)malloc(len + 1);
+	if (!p)
+		return (0);
 	i = 0;
-	if (n != 0)
+	while (i < len)
 	{
-		while (i < n - 1 && src[i])
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-		return (len);
+		p[i] = f(i, s[i]);
+		i++;
 	}
-	return (len);
+	p[i] = '\0';
+	return ((char *)(p));
 }
+
+// char hamid(unsigned int n, char s )
+// {
+//     return (n + s);
+// }
+// int main()
+// {
+//     printf("%s",ft_strmapi("habibi come to 1337", hamid));
+// }
