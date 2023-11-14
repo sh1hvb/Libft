@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:45:19 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/12 18:35:46 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/13 13:20:43 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,14 @@ char	*ft_itoa(int n)
 }
 // int main()
 // {
-//     int num = -10004;  // Change this to the integer you want to convert
+//     int num = -10004;  
 //     char *str = ft_itoa(num);
 
 //     if (str)
 //     {
 //         printf("Integer: %d\n", num);
 //         printf("String: %s\n", str);
-//         free(str);  // Don't forget to free the allocated memory
+//         free(str);  
 //     }
 //     else
 //     {
