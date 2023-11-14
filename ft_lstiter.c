@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 10:13:42 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/13 15:51:43 by mchihab          ###   ########.fr       */
+/*   Created: 2023/11/14 15:37:39 by mchihab           #+#    #+#             */
+/*   Updated: 2023/11/14 15:39:26 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
-
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+    if(!lst || !f)
+        return;
+    while (lst)
+    {
+        f(lst->content)
+        lst = lst->next;
+    }
+    
 }

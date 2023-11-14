@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:43:19 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/09 21:03:32 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/13 15:56:51 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-// int main()
-// {
-//     printf("%s",strrchr(0, 't'));
+//  int main()
+//  {
+//      printf("%s",strrchr(0, 't'));
 // }

@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 13:13:26 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/12 18:59:23 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/13 15:22:27 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		write(fd, "8", 1);
+		return ;
 	}
 	if (n < 0)
 	{
