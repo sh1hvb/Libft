@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 13:09:38 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/12 18:57:57 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/15 17:27:53 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
-
+	if(!s || !fd)
+		return ;
 	i = 0;
 	while (s[i])
 		write(fd, &s[i++], 1);

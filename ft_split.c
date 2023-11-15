@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:32:04 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/10 21:19:41 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/15 16:48:36 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,12 @@ static void	fill_arr(char **arr, const char *str, char c)
 		}
 		isep = i;
 		while (str[i] != c && str[i])
-		{
 			i++;
+		if (!(arr[index] = (char *)malloc(i - isep + 1)))
+		{
+			clear(arr);
+			return ;
 		}
-		arr[index] = (char *)malloc(i - isep + 1);
 		ft_strlcpy(arr[index], str + isep, i - isep + 1);
 		index++;
 	}
@@ -86,7 +88,6 @@ char	**ft_split(char const *s, char c)
 	fill_arr(arr, s, c);
 	arr[wrdcnt] = 0;
 	return (arr);
-	clear(arr);
 }
 // int main() {
 //     char *a="chihab , habibi , come , to , 1337";

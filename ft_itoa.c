@@ -74,14 +74,14 @@ char	*ft_itoa(int n)
 }
 // int main()
 // {
-//     int num = -10004;  
+//     int num = -10004;
 //     char *str = ft_itoa(num);
 
 //     if (str)
 //     {
 //         printf("Integer: %d\n", num);
 //         printf("String: %s\n", str);
-//         free(str);  
+//         free(str);
 //     }
 //     else
 //     {

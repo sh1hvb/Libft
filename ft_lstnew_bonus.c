@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 12:43:13 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/15 14:51:42 by mchihab          ###   ########.fr       */
+/*   Created: 2023/11/13 13:30:03 by mchihab           #+#    #+#             */
+/*   Updated: 2023/11/15 18:20:41 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft_bonus.h"
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
-	size_t	j;
+    t_list	*new;
 
-	i = 0;
-	if (!haystack && !len)
+	new = malloc(sizeof(t_list));
+	if (!new)
 		return (0);
-	if (!*needle)
-		return ((char *)haystack);
-	while (haystack[i])
-	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && needle[j] && (i + j) < len)
-		{
-			j++;
-		}
-		if (!(needle[j]))
-			return ((char *)haystack + i);
-		i++;
-	}
-	return (0);
+	new->content = content;
+	new->next = 0;
+	return (new);
 }
 // int main()
 // {
-//     printf("%s",ft_strnstr("habbibiibi","habibi", 20));
+//     int c =  1;
+//     t_list *b = ft_lstnew(&c);
+//     printf("%d\n",*((int *)b->content));
 // }

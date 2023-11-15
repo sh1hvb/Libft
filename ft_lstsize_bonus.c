@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 12:43:13 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/15 14:51:42 by mchihab          ###   ########.fr       */
+/*   Created: 2023/11/13 18:12:00 by mchihab           #+#    #+#             */
+/*   Updated: 2023/11/15 18:18:04 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft_bonus.h"
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	size_t	j;
-
+	int	i;
+    if (!lst)
+        return (0);
 	i = 0;
-	if (!haystack && !len)
-		return (0);
-	if (!*needle)
-		return ((char *)haystack);
-	while (haystack[i])
+	while (lst)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && needle[j] && (i + j) < len)
-		{
-			j++;
-		}
-		if (!(needle[j]))
-			return ((char *)haystack + i);
 		i++;
+		lst = lst->next;
 	}
-	return (0);
+	return (i);
 }
+
 // int main()
 // {
-//     printf("%s",ft_strnstr("habbibiibi","habibi", 20));
+//     t_list node0;
+//     t_list node1;
+//     node0.content = "habibi";
+//     node0.next = &node1;
+//     node1.content = "habiibi 1";
+//     node1.next = NULL;
+//     t_list *p = &node0;
+//     int a =ft_lstsize(p);
+//     printf("%d",a);
 // }

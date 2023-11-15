@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:46:23 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/12 19:11:59 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/15 17:31:43 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*p;
 
-	if (!s && !f)
+	if (!s || !f)
 		return (0);
 	len = ft_strlen(s);
 	p = (char *)malloc(len + 1);
