@@ -19,8 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	size_t	lens1;
 	size_t	lens2;
-	if(!s1 || !s2)
-		return 0;
+
+	if (!s1 || !s2)
+		return (0);
 	lens1 = ft_strlen((char *)s2);
 	lens2 = ft_strlen((char *)s1);
 	p = (char *)malloc(sizeof(char) * lens1 + lens2 + 1);

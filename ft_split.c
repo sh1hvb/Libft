@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:32:04 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/15 16:48:36 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/16 17:46:37 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ static void	fill_arr(char **arr, const char *str, char c)
 		isep = i;
 		while (str[i] != c && str[i])
 			i++;
-		if (!(arr[index] = (char *)malloc(i - isep + 1)))
+		arr[index] = (char *)malloc(i - isep + 1);
+		if (! arr[index])
 		{
 			clear(arr);
 			return ;

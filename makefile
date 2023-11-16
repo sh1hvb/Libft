@@ -6,7 +6,7 @@
 #    By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:50:55 by mchihab           #+#    #+#              #
-#    Updated: 2023/11/15 18:14:17 by mchihab          ###   ########.fr        #
+#    Updated: 2023/11/16 21:55:59 by mchihab          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,8 +72,6 @@ $(NAME) : $(OBJECT)  $(OBJECTB)
 bonus : $(OBJECTB) all
 		ar rcs $(NAME) $(OBJECTB)
 
-%.o : %.c
-			cc $(FLAGS) -c $<
 
 clean :
 			rm -rf $(OBJECT)
@@ -83,4 +81,3 @@ fclean : clean
 			rm -rf $(NAME)
 
 re : fclean all
-
