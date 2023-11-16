@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:57:54 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/12 19:06:00 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/15 17:31:15 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	lens1;
 	size_t	lens2;
 
+	if (!s1 || !s2)
+		return (0);
 	lens1 = ft_strlen((char *)s2);
 	lens2 = ft_strlen((char *)s1);
 	p = (char *)malloc(sizeof(char) * lens1 + lens2 + 1);

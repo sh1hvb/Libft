@@ -6,12 +6,11 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:45:19 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/13 13:20:43 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/16 21:49:19 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	cnt(int n)
 {
@@ -72,21 +71,26 @@ char	*ft_itoa(int n)
 	insert(p, n, count);
 	return (p);
 }
-// int main()
+
+// int	main(void)
 // {
-//     int num = -10004;  
-//     char *str = ft_itoa(num);
+// 	long	num;
+// 	char	*str;
 
-//     if (str)
-//     {
-//         printf("Integer: %d\n", num);
-//         printf("String: %s\n", str);
-//         free(str);  
-//     }
-//     else
-//     {
-//         printf("Memory allocation failed.\n");
-//     }
-
-//     return (0);
+// 	num = 0;
+// 	str = ft_itoa(num);
+// 	// char *str1 = _itoa(num);
+// 	if (str)
+// 	{
+// 		printf("Integer: %ld\n", num);
+// 		printf("String: %s\n", str);
+// 		// printf("Integer: %d\n", num);
+// 		// printf("String: %s\n", str1);
+// 		free(str);
+// 	}
+// 	else
+// 	{
+// 		printf("Memory allocation failed.\n");
+// 	}
+// 	return (0);
 // }

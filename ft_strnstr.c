@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:43:13 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/09 19:01:00 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/15 14:51:42 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
+	if (!haystack && !len)
+		return (0);
 	if (!*needle)
 		return ((char *)haystack);
 	while (haystack[i])
