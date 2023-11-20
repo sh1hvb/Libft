@@ -6,12 +6,11 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 21:25:24 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/15 18:17:38 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/19 14:24:04 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -25,7 +24,7 @@ t_list	*ft_lstlast(t_list *lst)
 }
 // int main()
 // {
-//      t_list node0;
+//     t_list node0;
 //     t_list node1;
 //     t_list node2;
 //     t_list node3;

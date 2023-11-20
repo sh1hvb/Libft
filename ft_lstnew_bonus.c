@@ -6,12 +6,11 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:30:03 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/15 18:20:41 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/17 14:07:59 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
 t_list	*ft_lstnew(void *content)
 {

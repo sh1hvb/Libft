@@ -6,21 +6,17 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:32:04 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/16 17:46:37 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/19 14:27:43 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-static void	clear(char **arr)
+static void	clear(char ***arr, int i)
 {
-	size_t	i;
-
-	i = 0;
-	while (arr[i])
-		free(arr[i++]);
-	free(arr);
+	while (i >= 0)
+		free((*arr)[i--]);
+	free(*arr);
 }
 
 static int	count_word(const char *str, char c)
@@ -67,7 +63,7 @@ static void	fill_arr(char **arr, const char *str, char c)
 		arr[index] = (char *)malloc(i - isep + 1);
 		if (! arr[index])
 		{
-			clear(arr);
+			clear(&arr, index);
 			return ;
 		}
 		ft_strlcpy(arr[index], str + isep, i - isep + 1);
@@ -91,14 +87,10 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 // int main() {
-//     char *a="chihab , habibi , come , to , 1337";
-//     char c =',';
+//     char *a="123";
+//     char c =' ';
 //     char **arr= ft_split(a,c);
 //     size_t i = 0;
-//     while( i <= 4)
-//     {
-//        printf("%s\n",arr[i++]);
-//     }
-
+//        printf("%p\n",arr);
 //     return (0);
 // }

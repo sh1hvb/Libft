@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 20:26:55 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/15 18:32:08 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/17 18:11:04 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ void	*ft_calloc(size_t count, size_t size)
 }
 // int main()
 // {
-//     printf("%s",ft_calloc(10,8));
+//     printf("%s\n o",ft_calloc(0,SIZE_MAX));
+//     printf("%sp",calloc(0,SIZE_MAX));
 // }

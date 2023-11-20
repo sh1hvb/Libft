@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 13:13:26 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/13 15:22:27 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/19 14:24:55 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	ft_putnbr_fd(int n, int fd)
 // {
 
 //     int fd = open("foo.txt", O_CREAT| O_RDWR);
-//     ft_putnbr_fd(-2147483648,fd);
+//     ft_putnbr_fd(-1235555,fd);
 //     return (0);
 // }
