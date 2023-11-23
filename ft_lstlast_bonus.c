@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 21:25:24 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/19 14:24:04 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/21 19:24:35 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (0);
-	while (lst && lst->next)
+	while (lst->next)
 	{
 		lst = lst->next;
 	}

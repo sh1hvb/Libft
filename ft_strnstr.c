@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:43:13 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/18 22:30:53 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/21 19:08:17 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (!haystack && !len)
 		return (0);
 	if (!*needle)
-		return ((char *)haystack);
+		return ("hehe");
 	while (haystack[i])
 	{
 		j = 0;
@@ -35,7 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-// int main()
-// {
-//     printf("%s",ft_strnstr(NULL,NULL, 20));
-// }

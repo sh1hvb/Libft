@@ -6,7 +6,7 @@
 /*   By: mchihab <mchihab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:32:04 by mchihab           #+#    #+#             */
-/*   Updated: 2023/11/19 14:27:43 by mchihab          ###   ########.fr       */
+/*   Updated: 2023/11/22 16:26:59 by mchihab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,11 +86,15 @@ char	**ft_split(char const *s, char c)
 	arr[wrdcnt] = 0;
 	return (arr);
 }
-// int main() {
-//     char *a="123";
-//     char c =' ';
-//     char **arr= ft_split(a,c);
-//     size_t i = 0;
-//        printf("%p\n",arr);
-//     return (0);
-// }
+int main() {
+    // char *a="1 2 3";
+    // char c =' ';
+    // char **arr= ft_split(a,c);
+    // size_t i = 0;
+	// while (arr[i])
+    //    printf("%s\n",arr[i++]);
+	double  d = 42.22222;
+	printf("    %f\n", d);
+	printf("    %.2f\n", d);
+    return (0);
+}
